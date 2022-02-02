@@ -19,6 +19,23 @@ $--fw-700:700;
 $--ff-spartan: 'Spartan', sans-serif;
 
 
+/*----- Início Scrollbar ------*/
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track{
+        background: $--very-gray;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: $--black;
+    }
+/*----- fim scrollbar------*/
+
+
+
     /*----- Início Slider ------*/
 
     /* Slideshow container */
@@ -61,7 +78,7 @@ $--ff-spartan: 'Spartan', sans-serif;
   
   /* Position the "next button" to the right */
   .prev {
-    right: 40px;
+    right: 45px;
 
     &::before{
         content: url("/img/icon-angle-left.svg");
@@ -77,39 +94,14 @@ $--ff-spartan: 'Spartan', sans-serif;
   }
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
   
   
   
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
   
-  .active, .dot:hover {
-    background-color: #717171;
-  }
   
+  
+  
+
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
@@ -284,18 +276,18 @@ $--ff-spartan: 'Spartan', sans-serif;
 
                     .grid-img1, .grid-img2, .grid-img3{
                         width: 100%;
-                        height: 360px;
+                        height: 300px;
                         background-repeat: no-repeat;
                         background-size: contain;
                     }
                     .grid-img1{
-                        background-image: url("/img/mobile-image-hero-1.jpg");
+                        background-image: url("/img/desktop-image-hero-1.jpg");
                     }
                     .grid-img2{
-                        background-image: url("/img/mobile-image-hero-2.jpg");
+                        background-image: url("/img/desktop-image-hero-2.jpg");
                     }
                     .grid-img3{
-                        background-image: url("/img/mobile-image-hero-3.jpg");
+                        background-image: url("/img/desktop-image-hero-3.jpg");
                     }
                     
                     .grid-texto{
@@ -392,8 +384,5 @@ $--ff-spartan: 'Spartan', sans-serif;
         }
     }
 }
-
-
-
 
 
