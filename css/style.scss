@@ -19,16 +19,16 @@ $--fw-700:700;
 $--ff-spartan: 'Spartan', sans-serif;
 
 
-html{
+
     
     .filter{
         
         background-color: $--dark-gray;
         filter: brightness(.4);
-        
+    } 
      
-     
-     
+    
+    
      
     body{
         
@@ -159,6 +159,7 @@ html{
         
 
         main{
+            
             transition: .05s;
             height: 100%;
             .container{
@@ -190,9 +191,8 @@ html{
                             font-weight: $--fw-600;
                             line-height: 15px;
                             margin-bottom: 45px;
-                            .txt1{
-                                font-size: 6rem;
-                             } 
+                            
+                            
                         }
                         a{
                             margin:30px;
@@ -241,7 +241,7 @@ html{
             }
         }
 
-    }
+    
     footer{
         margin-top: 20px;
         background: $--dark-gray;
@@ -260,7 +260,6 @@ html{
         }
         }
     }
-}
 
 
 
