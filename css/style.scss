@@ -19,6 +19,121 @@ $--fw-700:700;
 $--ff-spartan: 'Spartan', sans-serif;
 
 
+    /*----- Início Slider ------*/
+
+    /* Slideshow container */
+.container-slider{
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+
+  .seta{
+      position:relative;
+      width: 100%;
+      height: 100%;
+  
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    bottom:17px;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background: $--black;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+
+    &:hover{
+        background: $--very-gray;
+    }
+
+
+  }
+}
+
+  
+  /* Position the "next button" to the right */
+  .prev {
+    right: 40px;
+
+    &::before{
+        content: url("/img/icon-angle-left.svg");
+       // background-image: url("/img/icon-angle-left.svg");
+    }
+  }
+  .next{
+    right: 0;
+
+    &::before{
+        content :url("/img/icon-angle-right.svg");
+    }
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+    /*------ Fim slider ----*/
 
     
     .filter{
@@ -167,12 +282,22 @@ $--ff-spartan: 'Spartan', sans-serif;
                     width: 100%;
                     height: 100vh;
 
-                    .grid-img{
-                        height: 45vh;
-                        background-image: url("/img/desktop-image-hero-1.jpg");
+                    .grid-img1, .grid-img2, .grid-img3{
+                        width: 100%;
+                        height: 360px;
                         background-repeat: no-repeat;
-                        background-size: cover;
+                        background-size: contain;
                     }
+                    .grid-img1{
+                        background-image: url("/img/mobile-image-hero-1.jpg");
+                    }
+                    .grid-img2{
+                        background-image: url("/img/mobile-image-hero-2.jpg");
+                    }
+                    .grid-img3{
+                        background-image: url("/img/mobile-image-hero-3.jpg");
+                    }
+                    
                     .grid-texto{
                         height: 55vh;
                         font-family: $--ff-spartan;
@@ -190,9 +315,10 @@ $--ff-spartan: 'Spartan', sans-serif;
                             font-size: .8rem;
                             padding:0 30px;
                             font-weight: $--fw-600;
-                            line-height: 15px;
+                            line-height: 18px;
                             margin-bottom: 45px;
                             transition: .1s;
+                            
                             
                             
 
@@ -203,7 +329,8 @@ $--ff-spartan: 'Spartan', sans-serif;
                             letter-spacing: 10px;
                             color:$--black;
                             font-weight: $--fw-600;
-                            
+                            position:absolute;
+                            bottom:10px;
                         }
                     }
                 }
