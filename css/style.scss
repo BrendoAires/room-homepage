@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+$--mobile-width:375px;
+$--desktop-width:1440px;
+
+
+$--dark-gray: hsl(0, 0%, 63%);
+$--black: hsl(0, 0%, 0%);
+$--white:hsl(0, 0%, 100%);
+$--very-gray:hsl(0, 0%, 27%);
+
+$font-size:12px;
+
+$--fw-500:500;
+$--fw-600:600;
+$--fw-700:700;
+
+
+$--ff-spartan: 'Spartan', sans-serif;
+
+
+html{
+    
+    .filter{
+        
+        background-color: $--dark-gray;
+        filter: brightness(.4);
+        
+     
+     
+     
+     
+    body{
+        
+        
+
+        background:$--white;
+
+        header{
+            width:100%;
+            position: absolute;
+
+            .container-header{
+                height: inherit;
+                width:100%;
+
+                #menu{
+                    display: none;
+                }
+
+                .container-menu{
+                    width: inherit;
+                    height: inherit;
+                    #checkbox-menu{
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    label{
+                        cursor: pointer;
+                        position:absolute;
+                        z-index:1000;
+                        display: block;
+                        left:10px;
+                        top:25px;
+                        height:30px;
+                        width:30px;
+                    }
+                    label span{
+                        position:absolute;
+                        display:block;
+                        height:2px;
+                        width:100%;
+                        border-radius:30px;
+                        background:$--white;
+                        transition:0.25s ease-in-out;
+                    }
+
+                    label span:nth-child(1){
+                        top:0;
+                    }
+                    label span:nth-child(2){
+                        top:8px;
+                    }
+                    label span:nth-child(3){
+                        top:16px;
+                    }
+
+                    #checkbox-menu:checked + label span:nth-child(1){
+                        transform: rotate(-45deg);
+                        background: $--dark-gray;
+                        top:8px;
+                    }
+                    #checkbox-menu:checked + label span:nth-child(2){
+                        opacity: 0;
+                    }
+                    #checkbox-menu:checked + label span:nth-child(3){
+                        transform: rotate(45deg);
+                        background: $--dark-gray;
+                        top:8px;
+                    }
+                    
+
+                    input[type="checkbox"]{
+                        display:none;
+                    }
+                    input[type="checkbox"]:checked ~ nav{
+                        margin:0;
+                    }
+                    input[type="checkbox"]:checked ~ label{
+                        right:10px;
+                    }
+                    input[type="checkbox"]:checked ~ section{
+                        transform: translate3d(250px, 0, 0);
+                    }
+
+
+                }
+                
+                .topmenu{
+                    width: 100%;
+                    height:0;
+                    position:absolute;
+                    z-index: 1;
+                    top:0;
+                    left:0;
+                    overflow-x: hidden;
+                    overflow-y: hidden;
+                    transition:.3s;
+                    background:$--white;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    a{
+                        font-family: $--ff-spartan;
+                        font-weight: $--fw-700;
+                        color: $--black;
+                        font-size: .6rem;
+                        padding:0 15px;
+                    }
+                }
+
+                .navbrand{
+                    font-family: $--ff-spartan;
+                    
+                    height: 70px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                        a{
+                            color:$--white;
+                            font-size: 1.7rem;
+                        }
+                }
+
+            }
+
+        }
+        
+
+        main{
+            transition: .05s;
+            height: 100%;
+            .container{
+                .grid1{
+                    width: 100%;
+                    height: 100vh;
+
+                    .grid-img{
+                        height: 45vh;
+                        background-image: url("/img/desktop-image-hero-1.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .grid-texto{
+                        height: 55vh;
+                        font-family: $--ff-spartan;
+                        h1{
+                            font-size: 1.7rem;
+                            font-weight: $--fw-700;
+                            padding: 50px 20px 20px 30px;
+                            line-height:30px;
+                        }
+                    }
+                    
+                        p{
+                            color:$--dark-gray;
+                            font-size: .8rem;
+                            padding:0 30px;
+                            font-weight: $--fw-600;
+                            line-height: 15px;
+                            margin-bottom: 45px;
+                            .txt1{
+                                font-size: 6rem;
+                             } 
+                        }
+                        a{
+                            margin:30px;
+                            text-transform: uppercase;
+                            letter-spacing: 10px;
+                            color:$--black;
+                            font-weight: $--fw-600;
+                            
+                        }
+                    }
+                }
+                .grid2{
+                    background-image: url("/img/image-about-dark.jpg");
+                }
+                .grid4{
+                    background-image:url("/img/image-about-light.jpg");
+                }
+                .grid2, .grid4{
+                    
+                    background-size: cover;
+                    width: 100%;
+                    height: 30vh;
+                }
+                .grid3{
+                    font-family: $--ff-spartan;
+                    height:50vh;
+                    h1{
+                        font-size: .7rem;
+                        font-weight: $--fw-700;
+                        padding: 50px 20px 20px 30px;
+                        line-height:30px;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                    }
+                    p{
+                        color:$--dark-gray;
+                        font-size: .8rem;
+                        padding:0 30px;
+                        font-weight: $--fw-600;
+                        line-height: 20px;
+                        margin-bottom: 45px;
+                    }
+                }
+
+                
+            }
+        }
+
+    }
+    footer{
+        margin-top: 20px;
+        background: $--dark-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-family: $--ff-spartan;
+        .attribution { 
+            font-size: 11px; 
+            text-align: center; 
+        
+         a { 
+             color: hsl(228, 45%, 44%); 
+             
+        }
+        }
+    }
+}
+
+
+
+
+
