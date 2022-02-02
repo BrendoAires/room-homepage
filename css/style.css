@@ -182,16 +182,18 @@ body main .container .grid1 .grid-texto h1 {
   line-height: 30px;
 }
 
-body main .container .grid1 p {
+body main .container .grid1 .grid-texto p {
   color: #a1a1a1;
   font-size: .8rem;
   padding: 0 30px;
   font-weight: 600;
   line-height: 15px;
   margin-bottom: 45px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
-body main .container .grid1 a {
+body main .container .grid1 .grid-texto a {
   margin: 30px;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -199,26 +201,26 @@ body main .container .grid1 a {
   font-weight: 600;
 }
 
-body main .grid2 {
+body main .container .grid2 {
   background-image: url("/img/image-about-dark.jpg");
 }
 
-body main .grid4 {
+body main .container .grid4 {
   background-image: url("/img/image-about-light.jpg");
 }
 
-body main .grid2, body main .grid4 {
+body main .container .grid2, body main .container .grid4 {
   background-size: cover;
   width: 100%;
   height: 30vh;
 }
 
-body main .grid3 {
+body main .container .grid3 {
   font-family: "Spartan", sans-serif;
   height: 50vh;
 }
 
-body main .grid3 h1 {
+body main .container .grid3 h1 {
   font-size: .7rem;
   font-weight: 700;
   padding: 50px 20px 20px 30px;
@@ -227,16 +229,18 @@ body main .grid3 h1 {
   letter-spacing: 5px;
 }
 
-body main .grid3 p {
+body main .container .grid3 p {
   color: #a1a1a1;
   font-size: .8rem;
   padding: 0 30px;
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 45px;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
-footer {
+body footer {
   margin-top: 20px;
   background: #a1a1a1;
   display: -webkit-box;
@@ -252,12 +256,12 @@ footer {
   font-family: "Spartan", sans-serif;
 }
 
-footer .attribution {
+body footer .attribution {
   font-size: 11px;
   text-align: center;
 }
 
-footer .attribution a {
+body footer .attribution a {
   color: #3e52a3;
 }
 /*# sourceMappingURL=style.css.map */

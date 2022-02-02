@@ -176,13 +176,14 @@ $--ff-spartan: 'Spartan', sans-serif;
                     .grid-texto{
                         height: 55vh;
                         font-family: $--ff-spartan;
+                        
                         h1{
                             font-size: 1.7rem;
                             font-weight: $--fw-700;
                             padding: 50px 20px 20px 30px;
                             line-height:30px;
                         }
-                    }
+                    
                     
                         p{
                             color:$--dark-gray;
@@ -191,8 +192,10 @@ $--ff-spartan: 'Spartan', sans-serif;
                             font-weight: $--fw-600;
                             line-height: 15px;
                             margin-bottom: 45px;
+                            transition: .1s;
                             
                             
+
                         }
                         a{
                             margin:30px;
@@ -234,6 +237,7 @@ $--ff-spartan: 'Spartan', sans-serif;
                         font-weight: $--fw-600;
                         line-height: 20px;
                         margin-bottom: 45px;
+                        transition: .1s;
                     }
                 }
 
@@ -260,6 +264,7 @@ $--ff-spartan: 'Spartan', sans-serif;
         }
         }
     }
+}
 
 
 
